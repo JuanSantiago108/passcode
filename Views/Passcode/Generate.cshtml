@@ -1,0 +1,7 @@
+@model PassCode
+
+<h3>passcode #@Context.Session.GetInt32("count")</h3>
+<h3> Random passcode  @Model.GenerateString()</h3>
+<form asp-controller="PassCode" asp-action="Create" method="POST">
+    <button>Generate</button>
+</form>
